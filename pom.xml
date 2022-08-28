@@ -7,8 +7,8 @@
   <packaging>jar</packaging>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
     <exec.mainClass>com.fillumina.krasa.issue4.KrasaIssue4</exec.mainClass>
   </properties>
 
@@ -46,25 +46,10 @@
               <schemaIncludes>
                 <include>**/*.xsd</include>
               </schemaIncludes>
-              <!--              <bindingIncludes>
-                <include>**/*.xjb</include>
-              </bindingIncludes>-->
-              <!--              <readOnly>true</readOnly>
-              <episode>true</episode>
-              <specVersion>2.3</specVersion>
-              <strict>false</strict>
-              <extension>true</extension>
-              <removeOldOutput>true</removeOldOutput>
-              <locale>en</locale>-->
               <args>
                 <arg>-XJsr303Annotations</arg>
                 <arg>-XJsr303Annotations:JSR_349=true</arg>
                 <arg>-XJsr303Annotations:verbose=false</arg>
-                <!--
-                <arg>-Xnamespace-prefix</arg>
-                <arg>-Xcommons-lang</arg>
-                <arg>-no-header</arg>
-                -->
               </args>
               <dependencies>
                 <dependency>
@@ -77,20 +62,8 @@
                 <plugin>
                   <groupId>com.fillumina</groupId>
                   <artifactId>krasa-jaxb-tools</artifactId>
-                  <version>2.2.1-SNAPSHOT</version>
+                  <version>2.2</version>
                 </plugin>
-                <!--
-                <plugin>
-                  <groupId>org.jvnet.jaxb2_commons</groupId>
-                  <artifactId>jaxb2-namespace-prefix</artifactId>
-                  <version>1.2</version>
-                </plugin>
-                <plugin>
-                  <groupId>org.jvnet.jaxb2_commons</groupId>
-                  <artifactId>jaxb2-commons-lang</artifactId>
-                  <version>2.4</version>
-                </plugin>
-                -->
               </plugins>
             </configuration>
           </execution>
